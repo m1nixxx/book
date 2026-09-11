@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --wood: #ffffff;
+  --wood-bay: #f5f5f5;
+  --wood-plank: #e8e8e8;
+  --wood-edge: #dddddd;
+  --brass: #2f9e44;
+  --lamp: #222222;
+  --paper: #ffffff;
+  --paper-deep: #f5f5f5;
+  --ink: #222222;
+  --muted: #767676;
+  --accent: #2f9e44;
+  --accent-soft: #eaf6ec;
+  --card: #ffffff;
+  --line: #e5e5e5;
+  --navy: #003366;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-wood: var(--wood);
+  --color-wood-bay: var(--wood-bay);
+  --color-wood-plank: var(--wood-plank);
+  --color-wood-edge: var(--wood-edge);
+  --color-brass: var(--brass);
+  --color-lamp: var(--lamp);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-navy: var(--navy);
+  --font-sans: var(--font-sans-kr);
+  --font-serif: var(--font-serif-kr);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: #fff;
+  color: var(--ink);
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Apple SD Gothic Neo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.shelf-track {
+  display: flex;
+  width: max-content;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-inline: 0.25rem;
+  animation-name: shelf-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.shelf-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shelf-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shelf-track {
+    animation: none;
+  }
 }

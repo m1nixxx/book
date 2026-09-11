@@ -1,0 +1,339 @@
+{
+  "intro": {
+    "eyebrow": "성민이에게 책 추천받기",
+    "lead": "간단한 테스트를 통해 책을 추천받아보세요."
+  },
+  "questions": [
+    {
+      "id": "desk",
+      "prompt": "주말 오후, 책상 위에 책이 네 권이라면 어느 쪽을 먼저 여나요?",
+      "choices": [
+        {
+          "id": "world",
+          "label": "세계가 실제로 어떻게 돌아가는지 보여주는 책",
+          "delta": {
+            "knowledge": 2,
+            "imagination": -1,
+            "emotion": -1
+          }
+        },
+        {
+          "id": "life",
+          "label": "다른 사람의 인생 속으로 들어가는 소설",
+          "delta": {
+            "imagination": 2,
+            "emotion": 1
+          }
+        },
+        {
+          "id": "thought",
+          "label": "한 문장씩 붙잡고 읽는 고전이나 철학",
+          "delta": {
+            "density": 2,
+            "knowledge": 1
+          }
+        },
+        {
+          "id": "warmth",
+          "label": "읽고 나면 조금 따뜻해지는 책",
+          "delta": {
+            "comfort": 2,
+            "emotion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "prompt": "마지막 장을 덮고 나서, 무엇이 남았으면 하나요?",
+      "choices": [
+        {
+          "id": "fact",
+          "label": "내가 몰랐던 사실이나 구조",
+          "delta": {
+            "knowledge": 2
+          }
+        },
+        {
+          "id": "face",
+          "label": "잊히지 않는 인물",
+          "delta": {
+            "emotion": 2,
+            "imagination": 1
+          }
+        },
+        {
+          "id": "question",
+          "label": "쉽게 닫히지 않는 질문",
+          "delta": {
+            "density": 2,
+            "emotion": 1
+          }
+        },
+        {
+          "id": "rest",
+          "label": "잠시 기대어 쉴 수 있었던 온기",
+          "delta": {
+            "comfort": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "prompt": "지금 읽고 싶은 책의 날씨는 어떤가요?",
+      "choices": [
+        {
+          "id": "clear",
+          "label": "맑고 고요하다",
+          "delta": {
+            "comfort": 2,
+            "emotion": 1
+          }
+        },
+        {
+          "id": "overcast",
+          "label": "흐리다",
+          "delta": {
+            "emotion": 2,
+            "comfort": -1
+          }
+        },
+        {
+          "id": "storm",
+          "label": "폭풍우다",
+          "delta": {
+            "imagination": 2,
+            "comfort": -2
+          }
+        },
+        {
+          "id": "cold",
+          "label": "서늘하다",
+          "delta": {
+            "knowledge": 2,
+            "comfort": -1,
+            "emotion": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "pace",
+      "prompt": "책을 읽는 실제 속도는 어떤가요?",
+      "choices": [
+        {
+          "id": "linger",
+          "label": "한 페이지에 오래 머문다",
+          "delta": {
+            "density": 2
+          }
+        },
+        {
+          "id": "rush",
+          "label": "다음 장이 궁금해서 시계를 잊는다",
+          "delta": {
+            "density": -2,
+            "imagination": 2
+          }
+        },
+        {
+          "id": "mid",
+          "label": "보통 속도로 읽는다",
+          "delta": {
+            "density": 1
+          }
+        },
+        {
+          "id": "short",
+          "label": "빨리 읽는다.",
+          "delta": {
+            "density": -1,
+            "comfort": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "prompt": "책 속 사람에게 바라는 거리는요?",
+      "choices": [
+        {
+          "id": "near",
+          "label": "나와 비슷한 고민을 했으면 한다",
+          "delta": {
+            "emotion": 2
+          }
+        },
+        {
+          "id": "far",
+          "label": "나와 전혀 다른 삶을 살았으면 한다",
+          "delta": {
+            "imagination": 2
+          }
+        },
+        {
+          "id": "idea",
+          "label": "사람보다 생각이나 설명이 더 중요하다",
+          "delta": {
+            "knowledge": 2,
+            "emotion": -1
+          }
+        },
+        {
+          "id": "unreliable",
+          "label": "믿기 어려운 사람일수록 끌린다",
+          "delta": {
+            "comfort": -2,
+            "imagination": 1,
+            "emotion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dark",
+      "prompt": "잔혹하거나 불편한 장면이 나온다면?",
+      "choices": [
+        {
+          "id": "avoid",
+          "label": "가능하면 피하고 싶다",
+          "delta": {
+            "comfort": 2
+          }
+        },
+        {
+          "id": "need",
+          "label": "이야기에 필요하면 받아들인다",
+          "delta": {
+            "comfort": -1,
+            "density": 1
+          }
+        },
+        {
+          "id": "draw",
+          "label": "오히려 그런 책에 손이 간다",
+          "delta": {
+            "comfort": -2,
+            "density": 1,
+            "imagination": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "hold",
+      "prompt": "한 권을 끝까지 붙잡는 힘은 어디에 있나요?",
+      "choices": [
+        {
+          "id": "sentence",
+          "label": "문장의 결",
+          "delta": {
+            "density": 2,
+            "emotion": 1
+          }
+        },
+        {
+          "id": "plot",
+          "label": "사건이 굴러가는 힘",
+          "delta": {
+            "imagination": 2,
+            "density": -1
+          }
+        },
+        {
+          "id": "claim",
+          "label": "주장이 선명한 뼈대",
+          "delta": {
+            "knowledge": 2,
+            "imagination": -1
+          }
+        },
+        {
+          "id": "relation",
+          "label": "인물 사이의 공기",
+          "delta": {
+            "emotion": 2,
+            "imagination": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "where",
+      "prompt": "읽고 싶은 책의 배경은요?",
+      "choices": [
+        {
+          "id": "here",
+          "label": "지금 여기의 일상",
+          "delta": {
+            "emotion": 2,
+            "imagination": 1
+          }
+        },
+        {
+          "id": "then",
+          "label": "과거의 시대",
+          "delta": {
+            "density": 1,
+            "knowledge": 1
+          }
+        },
+        {
+          "id": "map",
+          "label": "우주나 역사처럼 실제 세계",
+          "delta": {
+            "knowledge": 2,
+            "imagination": 1
+          }
+        },
+        {
+          "id": "unmapped",
+          "label": "현실에 없는 다른 세계",
+          "delta": {
+            "imagination": 2,
+            "comfort": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "prompt": "지금 책을 펴는 가장 가까운 이유는?",
+      "choices": [
+        {
+          "id": "see",
+          "label": "세상을 더 정확히 보고 싶다",
+          "delta": {
+            "knowledge": 2,
+            "imagination": -1
+          }
+        },
+        {
+          "id": "leave",
+          "label": "잠시 이 세계에서 나가고 싶다",
+          "delta": {
+            "imagination": 2,
+            "comfort": 1
+          }
+        },
+        {
+          "id": "hold",
+          "label": "나를 다독여 주는 문장이 필요하다",
+          "delta": {
+            "comfort": 2,
+            "emotion": 1
+          }
+        },
+        {
+          "id": "keep",
+          "label": "쉽게 소비되지 않는 생각을 붙잡고 싶다",
+          "delta": {
+            "density": 2,
+            "knowledge": 1
+          }
+        }
+      ]
+    }
+  ]
+}
