@@ -8,8 +8,8 @@ type Props = {
 
 export function BookCard({ book, reason }: Props) {
   return (
-    <article className="flex gap-4 border border-line bg-card p-4">
-      <Link href={`/books/${book.id}`} className="relative h-36 w-24 shrink-0 overflow-hidden bg-paper-deep">
+    <article className="flex gap-3 border border-line bg-card p-3 sm:gap-4 sm:p-4">
+      <Link href={`/books/${book.id}`} className="relative h-28 w-20 shrink-0 overflow-hidden bg-paper-deep sm:h-36 sm:w-24">
         {book.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
@@ -17,7 +17,7 @@ export function BookCard({ book, reason }: Props) {
       </Link>
       <div className="min-w-0">
         <p className="text-xs tracking-wide text-muted">{bookKindLabel(book)}</p>
-        <h3 className="mt-1 font-serif text-lg leading-snug">
+        <h3 className="mt-1 font-serif text-base leading-snug break-keep sm:text-lg">
           <Link href={`/books/${book.id}`} className="hover:text-accent">
             {book.title}
           </Link>

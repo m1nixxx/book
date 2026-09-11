@@ -14,16 +14,19 @@ export function SearchBar() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="flex h-12 flex-1 items-center rounded-full border border-[#c8c8c8] px-4">
-      <span className="pr-3 text-sm text-muted">통합검색</span>
-      <span className="h-4 w-px bg-line" />
+    <form
+      onSubmit={onSubmit}
+      className="flex h-11 min-w-0 flex-1 items-center rounded-full border border-[#c8c8c8] px-3 sm:h-12 sm:px-4"
+    >
+      <span className="hidden pr-3 text-sm text-muted sm:inline">통합검색</span>
+      <span className="hidden h-4 w-px bg-line sm:block" />
       <input
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="문고에서 책 제목 또는 저자를 검색하세요"
-        className="h-full min-w-0 flex-1 bg-transparent px-3 text-sm outline-none placeholder:text-muted"
+        placeholder="책 제목 또는 저자"
+        className="h-full min-w-0 flex-1 bg-transparent px-1 text-base outline-none placeholder:text-muted sm:px-3 sm:text-sm"
       />
-      <button type="submit" className="text-sm font-medium text-navy">
+      <button type="submit" className="shrink-0 px-1 text-sm font-medium text-navy sm:px-0">
         검색
       </button>
     </form>

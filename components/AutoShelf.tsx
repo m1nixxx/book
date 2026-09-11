@@ -17,8 +17,12 @@ export function AutoShelf({ books }: Props) {
     <div className="overflow-hidden">
       <div className="shelf-track" style={{ animationDuration: `${duration}s` }}>
         {loop.map((book, index) => (
-          <Link key={`${book.id}-${index}`} href={`/books/${book.id}`} className="w-[120px] shrink-0">
-            <span className="block h-[170px] overflow-hidden bg-paper-deep">
+          <Link
+            key={`${book.id}-${index}`}
+            href={`/books/${book.id}`}
+            className="w-[112px] shrink-0 sm:w-[120px]"
+          >
+            <span className="block h-[160px] overflow-hidden bg-paper-deep sm:h-[170px]">
               {book.cover ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />

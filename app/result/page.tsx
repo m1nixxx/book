@@ -34,7 +34,7 @@ export default async function ResultPage({ searchParams }: Props) {
   return (
     <PageSheet>
       <p className="text-sm tracking-wide text-ink/60">오늘의 읽기 성향</p>
-      <h1 className="mt-3 font-serif text-4xl">{persona.name}</h1>
+      <h1 className="mt-3 font-serif text-3xl break-keep sm:text-4xl">{persona.name}</h1>
       <p className="mt-5 max-w-xl text-base leading-8 text-ink/70">{persona.summary}</p>
       <p className="mt-3 max-w-xl text-sm leading-7 text-muted">{persona.fit}</p>
 
@@ -42,7 +42,7 @@ export default async function ResultPage({ searchParams }: Props) {
         <h2 className="text-sm tracking-wide text-ink/60">읽기 좌표</h2>
         <div className="mt-4 grid gap-3">
           {AXIS_LABELS.map((axis) => (
-            <div key={axis.key} className="grid grid-cols-[3rem_1fr_1.5rem] items-center gap-3">
+            <div key={axis.key} className="grid grid-cols-[2.75rem_1fr_1.75rem] items-center gap-2 sm:grid-cols-[3rem_1fr_1.5rem] sm:gap-3">
               <span className="text-xs text-muted">{axis.label}</span>
               <div className="h-2 bg-paper-deep" title={axis.hint}>
                 <div
@@ -82,7 +82,7 @@ export default async function ResultPage({ searchParams }: Props) {
           다시 추천받기
         </Link>
         <Link href="/books" className="text-ink/60 hover:text-ink">
-          서가 전체
+          서재 전체
         </Link>
       </div>
     </PageSheet>

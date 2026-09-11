@@ -23,21 +23,21 @@ export default async function BookDetailPage({ params }: Props) {
   return (
     <PageSheet>
       <Link href="/books" className="text-sm text-ink/60 hover:text-ink">
-        서가로
+        서재로
       </Link>
-      <div className="mt-6 flex gap-6">
+      <div className="mt-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
         <div className="relative h-52 w-36 shrink-0 overflow-hidden bg-paper-deep">
           {book.cover ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
           ) : null}
         </div>
-        <div>
+        <div className="min-w-0 w-full">
           <p className="text-xs tracking-wide text-muted">
             {bookKindLabel(book)}
             {readWhenLabel(book) ? ` · ${readWhenLabel(book)}` : ""}
           </p>
-          <h1 className="mt-2 font-serif text-3xl leading-tight">{book.title}</h1>
+          <h1 className="mt-2 font-serif text-2xl leading-tight break-keep sm:text-3xl">{book.title}</h1>
           {book.subTitle ? <p className="mt-2 text-sm text-muted">{book.subTitle}</p> : null}
           <p className="mt-4 text-sm">
             {book.author}
@@ -67,17 +67,17 @@ export default async function BookDetailPage({ params }: Props) {
       {book.oneLiner ? (
         <section className="mt-12">
           <h2 className="text-center font-serif text-xs tracking-[0.18em] text-muted">성민이의 감상평</h2>
-          <blockquote className="relative mx-auto mt-6 max-w-xl px-10 py-6 text-center">
+          <blockquote className="relative mx-auto mt-6 max-w-xl px-6 py-6 text-center sm:px-10">
             <span
               aria-hidden
-              className="pointer-events-none absolute left-0 top-0 font-serif text-[4.5rem] leading-none text-navy/20"
+              className="pointer-events-none absolute left-0 top-0 font-serif text-[3.5rem] leading-none text-navy/20 sm:text-[4.5rem]"
             >
               “
             </span>
-            <p className="font-serif text-[1.25rem] leading-9 text-navy">{book.oneLiner}</p>
+            <p className="font-serif text-lg leading-8 text-navy sm:text-[1.25rem] sm:leading-9">{book.oneLiner}</p>
             <span
               aria-hidden
-              className="pointer-events-none absolute bottom-[-0.4rem] right-0 font-serif text-[4.5rem] leading-none text-navy/20"
+              className="pointer-events-none absolute bottom-[-0.4rem] right-0 font-serif text-[3.5rem] leading-none text-navy/20 sm:text-[4.5rem]"
             >
               ”
             </span>

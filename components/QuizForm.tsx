@@ -33,7 +33,7 @@ export function QuizForm() {
       <p className="mt-6 text-sm text-muted">
         {index + 1} / {QUIZ_QUESTIONS.length}
       </p>
-      <h1 className="mt-4 font-serif text-3xl leading-snug">{question.prompt}</h1>
+      <h1 className="mt-4 font-serif text-2xl leading-snug break-keep sm:text-3xl">{question.prompt}</h1>
       <div className="mt-8 grid gap-3">
         {question.choices.map((choice) => {
           const selected = answers[index] === choice.id;
@@ -42,7 +42,7 @@ export function QuizForm() {
               key={choice.id}
               type="button"
               onClick={() => choose(choice.id)}
-              className={`border bg-card px-4 py-4 text-left hover:border-navy ${
+              className={`min-h-14 border bg-card px-4 py-4 text-left hover:border-navy ${
                 selected ? "border-navy" : "border-line"
               }`}
             >
@@ -55,7 +55,7 @@ export function QuizForm() {
         <button
           type="button"
           onClick={() => setIndex(index - 1)}
-          className="mt-6 text-sm text-muted hover:text-navy"
+          className="mt-6 inline-flex min-h-10 items-center text-sm text-muted hover:text-navy"
         >
           이전 문항
         </button>

@@ -21,8 +21,8 @@ export default async function BooksPage({ searchParams }: Props) {
     : books;
 
   return (
-    <div className="mx-auto max-w-[1200px] px-5 py-10">
-      <h1 className="text-2xl font-bold">서가</h1>
+    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-5 sm:py-10">
+      <h1 className="text-xl font-bold sm:text-2xl">서재</h1>
       <p className="mt-2 text-sm text-muted">
         {query ? `'${query}' 검색 결과 ${matched.length}권` : "문고에 꽂힌 책을 장르별로 모아 두었습니다."}
       </p>

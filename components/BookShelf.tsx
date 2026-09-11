@@ -5,7 +5,7 @@ import { LibraryShelf } from "@/components/LibraryShelf";
 import { GENRES, NOVEL_SUBGENRES, type Book, type Genre, type NovelSubgenre } from "@/lib/types";
 
 function chipClass(active: boolean): string {
-  return `border-b-2 px-1 pb-2 text-sm ${
+  return `inline-flex min-h-10 shrink-0 items-center border-b-2 px-1 pb-2 text-sm ${
     active ? "border-navy font-medium text-navy" : "border-transparent text-muted"
   }`;
 }
@@ -51,16 +51,21 @@ export function BookShelf({
 
   return (
     <div>
-      <div className="flex flex-wrap gap-5 border-b border-line">
+      <div className="no-scrollbar flex gap-5 overflow-x-auto border-b border-line">
         {(["전체", ...GENRES.filter((item) => availableGenres.has(item))] as const).map((item) => (
-          <button key={item} type="button" onClick={() => chooseGenre(item)} className={chipClass(genre === item)}>
+          <button
+            key={item}
+            type="button"
+            onClick={() => chooseGenre(item)}
+            className={`${chipClass(genre === item)} shrink-0`}
+          >
             {item}
           </button>
         ))}
       </div>
       {genre === "소설" && availableSubgenres.length > 0 ? (
-        <div className="mt-3 flex flex-wrap gap-2">
-          <button type="button" onClick={() => setSubgenre("전체")} className={chipClass(subgenre === "전체")}>
+        <div className="no-scrollbar mt-3 flex gap-4 overflow-x-auto">
+          <button type="button" onClick={() => setSubgenre("전체")} className={`${chipClass(subgenre === "전체")} shrink-0`}>
             소설 전체
           </button>
           {availableSubgenres.map((item) => (
