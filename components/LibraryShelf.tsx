@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CoverImage } from "@/components/CoverImage";
 import type { Book } from "@/lib/types";
 
 type Props = {
@@ -16,10 +17,7 @@ export function LibraryShelf({ books, label }: Props) {
         {books.map((book) => (
           <Link key={book.id} href={`/books/${book.id}`} className="min-w-0">
             <span className="block aspect-[2/3] overflow-hidden bg-paper-deep">
-              {book.cover ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
-              ) : null}
+              {book.cover ? <CoverImage src={book.cover} alt={book.title} /> : null}
             </span>
             <span className="mt-2 line-clamp-2 block text-sm leading-5 break-keep">{book.title}</span>
             <span className="mt-1 line-clamp-1 block text-xs text-muted">{book.author}</span>

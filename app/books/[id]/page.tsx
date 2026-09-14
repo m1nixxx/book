@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BookCard } from "@/components/BookCard";
+import { CoverImage } from "@/components/CoverImage";
 import { PageSheet } from "@/components/PageSheet";
 import { getBook, getBooks } from "@/lib/books";
 import { similarBooks } from "@/lib/recommend";
@@ -27,10 +28,7 @@ export default async function BookDetailPage({ params }: Props) {
       </Link>
       <div className="mt-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
         <div className="relative h-52 w-36 shrink-0 overflow-hidden bg-paper-deep">
-          {book.cover ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
-          ) : null}
+          {book.cover ? <CoverImage src={book.cover} alt={book.title} /> : null}
         </div>
         <div className="min-w-0 w-full">
           <p className="text-xs tracking-wide text-muted">

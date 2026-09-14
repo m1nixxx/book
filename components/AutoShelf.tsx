@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CoverImage } from "@/components/CoverImage";
 import type { Book } from "@/lib/types";
 
 type Props = {
@@ -23,10 +24,7 @@ export function AutoShelf({ books }: Props) {
             className="w-[112px] shrink-0 sm:w-[120px]"
           >
             <span className="block h-[160px] overflow-hidden bg-paper-deep sm:h-[170px]">
-              {book.cover ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
-              ) : null}
+              {book.cover ? <CoverImage src={book.cover} alt={book.title} /> : null}
             </span>
             <span className="mt-2 line-clamp-2 block text-[13px] leading-5 text-ink">{book.title}</span>
             <span className="mt-1 line-clamp-1 block text-xs text-muted">{book.author}</span>

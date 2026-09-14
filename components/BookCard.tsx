@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CoverImage } from "@/components/CoverImage";
 import { bookKindLabel, type Book } from "@/lib/types";
 
 type Props = {
@@ -10,10 +11,7 @@ export function BookCard({ book, reason }: Props) {
   return (
     <article className="flex gap-3 border border-line bg-card p-3 sm:gap-4 sm:p-4">
       <Link href={`/books/${book.id}`} className="relative h-28 w-20 shrink-0 overflow-hidden bg-paper-deep sm:h-36 sm:w-24">
-        {book.cover ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={book.cover} alt={book.title} className="h-full w-full object-cover" />
-        ) : null}
+        {book.cover ? <CoverImage src={book.cover} alt={book.title} /> : null}
       </Link>
       <div className="min-w-0">
         <p className="text-xs tracking-wide text-muted">{bookKindLabel(book)}</p>

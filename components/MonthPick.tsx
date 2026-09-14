@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { CoverImage } from "@/components/CoverImage";
 import { booksInPeriod, type ReadingPeriod } from "@/lib/reading";
 import type { Book } from "@/lib/types";
 
@@ -55,12 +56,9 @@ export function MonthPick({ books, periods, initialPeriodId }: Props) {
       <div className="grid items-center gap-8 px-6 py-8 md:grid-cols-[220px_1fr]">
         <Link href={`/books/${book.id}`} className="justify-self-center">
           {book.cover ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={book.cover}
-              alt={book.title}
-              className="h-72 w-48 object-cover shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
-            />
+            <span className="block h-72 w-48 overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+              <CoverImage src={book.cover} alt={book.title} />
+            </span>
           ) : null}
         </Link>
         <div className="min-w-0">
