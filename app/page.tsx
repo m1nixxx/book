@@ -28,7 +28,7 @@ export default async function HomePage() {
                 href={item.href}
                 className={
                   item.href === "/quiz"
-                    ? "col-span-2 flex min-h-16 items-center justify-center rounded-xl border border-line bg-white px-2 py-3 text-center text-base font-medium text-ink sm:col-span-1 sm:min-h-12 sm:text-sm sm:font-normal"
+                    ? "col-span-2 flex min-h-16 items-center justify-center rounded-xl border border-navy bg-navy px-2 py-3 text-center text-base font-medium text-white transition-colors hover:bg-[#00264d] sm:col-span-1 sm:min-h-12 sm:text-sm"
                     : "flex min-h-12 items-center justify-center rounded-xl border border-line bg-white px-2 py-3 text-center text-sm text-ink"
                 }
               >
