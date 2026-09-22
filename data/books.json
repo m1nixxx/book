@@ -428,18 +428,86 @@
     "link": "https://www.yes24.com/product/goods/102687133",
     "genre": "소설",
     "subgenre": "문학",
-    "tags": [],
+    "tags": [
+      "한국소설",
+      "가족",
+      "여성"
+    ],
+    "axes": {
+      "imagination": 3,
+      "density": 4,
+      "emotion": 5,
+      "comfort": 3,
+      "knowledge": 2
+    },
+    "oneLiner": "아무리 고된 상황에서도 결국엔 함께 이겨냈음에",
+    "seedTitle": "밝은 밤",
+    "readYear": 2026,
+    "readMonth": 9,
+    "best2025": false,
+    "best2025Rank": null
+  },
+  {
+    "id": "6111280",
+    "itemId": 6111280,
+    "isbn13": "9788956605593",
+    "title": "불안",
+    "subTitle": "",
+    "author": "알랭 드 보통 저/정영목 역",
+    "publisher": "은행나무",
+    "cover": "https://image.yes24.com/goods/6111280/L",
+    "introduction": "'불안'은 하루에도 몇 번씩 경험하는, 현대를 사는 우리에게는 매우 밀접한 개념이다. 알랭 드 보통의 말대로, 우리의 삶은 불안을 떨쳐내고, 새로운 불안을 맞아들이고, 또 다시 그것을 떨쳐내는 과정의 연속인지도 모른다. 『불안』은 우리가 일상 속에서 겪는 다양한 종류의 불안 중 사회적 지위(status)와 관련된 불안을 집중적으로 탐구하고 있다.\r\n\r\n경제적 성취 정도에 의해, 즉 돈을 얼마나 벌었느냐에 따라 자연스럽게 지위가 구분되기 시작한 시기가 있었다. 그 시점부터 인간은 새로운 불안의 영역에 들어서게 된다.",
+    "link": "https://www.yes24.com/product/goods/6111280",
+    "genre": "인문",
+    "subgenre": null,
+    "tags": [
+      "철학",
+      "사회",
+      "지위"
+    ],
+    "axes": {
+      "imagination": 2,
+      "density": 3,
+      "emotion": 3,
+      "comfort": 2,
+      "knowledge": 4
+    },
+    "oneLiner": "",
+    "seedTitle": "불안",
+    "readYear": 2026,
+    "readMonth": 9,
+    "best2025": false,
+    "best2025Rank": null
+  },
+  {
+    "id": "2950700",
+    "itemId": 2950700,
+    "isbn13": "9788937461798",
+    "title": "브람스를 좋아하세요...",
+    "subTitle": "",
+    "author": "프랑수아즈 사강 저/김남주 역",
+    "publisher": "민음사",
+    "cover": "https://image.yes24.com/goods/2950700/L",
+    "introduction": "프랑스 문단의 섬세한 심리 묘사의 대가 프랑수아즈 사강이 그려낸 세 남녀의 사랑과 집착, 일탈, 불안, 기쁨. 이 작품은 전혀 다른 두 사랑 앞에서 방황하는 폴의 심리를 중심으로, 사랑이라는 감정으로 그녀와 연결된 로제와 시몽의 심리를 섬세하게 묘사하고 있다.",
+    "link": "https://www.yes24.com/product/goods/2950700",
+    "genre": "소설",
+    "subgenre": "문학",
+    "tags": [
+      "고전",
+      "사랑",
+      "프랑스문학"
+    ],
     "axes": {
       "imagination": 3,
       "density": 3,
-      "emotion": 3,
+      "emotion": 5,
       "comfort": 3,
-      "knowledge": 3
+      "knowledge": 2
     },
     "oneLiner": "",
-    "seedTitle": "밝은 밤",
-    "readYear": null,
-    "readMonth": null,
+    "seedTitle": "브람스를 좋아하세요",
+    "readYear": 2026,
+    "readMonth": 9,
     "best2025": false,
     "best2025Rank": null
   },

@@ -202,6 +202,26 @@ export const BOOK_OVERRIDES: Record<string, BookOverride> = {
     axes: { imagination: 2, density: 5, emotion: 3, comfort: 2, knowledge: 5 },
     oneLiner: "니체의 ‘초월자’를, 남의 기준이 아니라 스스로 길을 고르는 삶으로 풀어 씁니다.",
   },
+  불안: {
+    genre: "인문",
+    tags: ["철학", "사회", "지위"],
+    axes: { imagination: 2, density: 3, emotion: 3, comfort: 2, knowledge: 4 },
+    oneLiner: "타인의 시선과 사회적 지위가 만드는 불안을, 철학으로 풀어 봅니다.",
+  },
+  "브람스를 좋아하세요": {
+    genre: "소설",
+    subgenre: "문학",
+    tags: ["고전", "사랑", "프랑스문학"],
+    axes: { imagination: 3, density: 3, emotion: 5, comfort: 3, knowledge: 2 },
+    oneLiner: "서른아홉 폴과 스물다섯 시몽 사이에서, 폴이 사랑을 다시 마주하는 이야기입니다.",
+  },
+  "밝은 밤": {
+    genre: "소설",
+    subgenre: "문학",
+    tags: ["한국소설", "가족", "여성"],
+    axes: { imagination: 3, density: 4, emotion: 5, comfort: 3, knowledge: 2 },
+    oneLiner: "아무리 고된 상황에서도 결국엔 함께 이겨냈음에",
+  },
 };
 
 export function overrideKey(title: string): string {
